@@ -15409,8 +15409,8 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     }
   }, [_vm._v("Create Item")])], 1)]), _c('br'), _vm._v(" "), _c('table', {
     staticClass: "table table-hover"
-  }, [_vm._m(0), _vm._v(" "), _c('tbody', _vm._l((_vm.items), function(item) {
-    return _c('tr', [_c('td', [_vm._v(_vm._s(item.id))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(item.name))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(item.price))]), _vm._v(" "), _c('td', [_c('router-link', {
+  }, [_vm._m(0), _vm._v(" "), _c('tbody', _vm._l((_vm.items), function(item, count) {
+    return _c('tr', [_c('td', [_vm._v(_vm._s(count + 1))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(item.name))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(item.price))]), _vm._v(" "), _c('td', [_c('router-link', {
       staticClass: "btn btn-primary",
       attrs: {
         "to": {
@@ -15431,7 +15431,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   }))])])
 }
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('thead', [_c('tr', [_c('td', [_vm._v("ID")]), _vm._v(" "), _c('td', [_vm._v("Item Name")]), _vm._v(" "), _c('td', [_vm._v("Item Price")]), _vm._v(" "), _c('td', [_vm._v("Actions")])])])
+  return _c('thead', [_c('tr', [_c('td', [_vm._v("No")]), _vm._v(" "), _c('td', [_vm._v("Item Name")]), _vm._v(" "), _c('td', [_vm._v("Item Price")]), _vm._v(" "), _c('td', [_vm._v("Actions")])])])
 }]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }

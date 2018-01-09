@@ -12,7 +12,7 @@
         <table class="table table-hover">
             <thead>
             <tr>
-                <td>ID</td>
+                <td>No</td>
                 <td>Item Name</td>
                 <td>Item Price</td>
                 <td>Actions</td>
@@ -20,8 +20,8 @@
             </thead>
 
             <tbody>
-                <tr v-for="item in items">
-                    <td>{{ item.id }}</td>
+                <tr v-for="item,count  in items">
+                    <td>{{ count+1 }}</td>
                     <td>{{ item.name }}</td>
                     <td>{{ item.price }}</td>
                     <td><router-link :to="{name: 'EditItem', params: { id: item.id }}" class="btn btn-primary">Edit</router-link></td>
