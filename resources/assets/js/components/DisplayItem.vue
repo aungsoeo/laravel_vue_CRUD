@@ -25,7 +25,9 @@
                     <td>{{ item.name }}</td>
                     <td>{{ item.price }}</td>
                     <td><router-link :to="{name: 'EditItem', params: { id: item.id }}" class="btn btn-primary">Edit</router-link></td>
-                    <td><button class="btn btn-danger" v-on:click="deleteItem(item.id)">Delete</button></td>
+                    <td>
+                        <button class="btn btn-danger" v-on:click="deleteItem(item.id)">Delete</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -49,16 +51,17 @@
         methods: {
             fetchItems()
             {
-              let uri = 'http://localhost:8000/items';
+              let uri = 'http://127.0.0.1:8000/items';
               this.axios.get(uri).then((response) => {
                   this.items = response.data;
               });
             },
             deleteItem(id)
-            {
-              let uri = `http://localhost:8000/items/${id}`;
+            {   
+              let uri = 'http://127.0.0.1:8000/items/'+id;
               this.items.splice(id, 1);
               this.axios.delete(uri);
+              this.fetchItems();
             }
         }
     }
